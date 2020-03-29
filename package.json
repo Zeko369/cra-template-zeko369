@@ -1,7 +1,6 @@
 {
   "name": "cra-template-zeko369",
   "version": "0.0.2",
-  "main": "index.js",
   "author": "Fran Zekan <zekan.fran369@gmail.com>",
   "license": "MIT",
   "scripts": {
