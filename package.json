@@ -22,10 +22,5 @@
     "react-router-dom": "^5.1.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build"
-    }
   }
 }
