@@ -5,7 +5,8 @@
   "author": "Fran Zekan <zekan.fran369@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "ts-node setup.ts"
+    "build": "ts-node setup.ts",
+    "start": "cd src && yarn start"
   },
   "devDependencies": {
     "@types/node": "^13.5.3",
