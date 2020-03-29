@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 
 const Home: React.FC = () => {
+  const [count, setCount] = React.useState(0);
+
   return (
     <div>
-      Hello from Home
-      <br />
-      <Button>This is a button</Button>
-      <br />
       <Link to="/page">Page</Link>
+      <br />
+      <Button onClick={() => setCount((v) => v + 1)}>This is a button: {count}</Button>
     </div>
   );
 };

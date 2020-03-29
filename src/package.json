@@ -3,10 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.0.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "rs:start": "react-scripts start",
+    "start": "react-app-rewired start",
+    "rs:build": "react-scripts start",
+    "build": "react-app-rewired build",
     "lint": "eslint './**/*.{ts,tsx,js,jsx}'",
-    "pretty": "prettier --write './**/*.{ts,tsx,js,jsx}'"
+    "pretty": "prettier --write './**/*.{ts,tsx,js,jsx}'",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
@@ -18,6 +31,8 @@
     "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "customize-cra": "^0.9.1",
+    "customize-cra-react-refresh": "^1.0.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -27,15 +42,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "prettier": "^2.0.2",
+    "react-app-rewired": "^2.1.5",
     "typescript": "^3.7.5"
-  },
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
-    "styled-components": "^5.0.1"
   },
   "browserslist": {
     "production": [
