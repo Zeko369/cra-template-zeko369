@@ -1,5 +1,7 @@
+const tasks = (arr) => arr.join(" && ");
+
 module.exports = {
   hooks: {
-    "pre-commit": "yarn build && git add ."
+    "pre-commit": tasks(["yarn build", "git add ."])
   }
 };
