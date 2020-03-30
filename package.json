@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "author": "Fran Zekan <zekan.fran369@gmail.com>",
   "license": "MIT",
+  "main": "template.json",
   "scripts": {
     "build": "ts-node setup.ts",
     "start": "cd src && yarn start"
