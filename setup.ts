@@ -45,7 +45,7 @@ fs.rmdir("./template", { recursive: true }, () => {
   });
 
   const { devDependencies, dependencies, scripts } = require("./src/package.json");
-  const data = { package: { devDependencies, dependencies, scripts } };
+  const data = { package: { dependencies: { ...devDependencies, ...dependencies }, scripts } };
 
   const template = JSON.stringify(data, null, 2);
 
