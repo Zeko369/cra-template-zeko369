@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     <div>
       <Link to="/page">Page</Link>
       <br />
-      <Button onClick={() => setCount((v) => v + 1)}>This is a button: {count}</Button>
+      <Button onClick={(): void => setCount((v) => v + 1)}>This is a button: {count}</Button>
     </div>
   );
 };
