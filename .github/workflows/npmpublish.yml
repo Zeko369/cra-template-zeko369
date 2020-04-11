@@ -32,12 +32,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: template
-      # - name: Use Node.js (NPM registry)
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: "12.x"
-      #     registry-url: "https://registry.npmjs.org"
-      # - run: yarn publish --not-interactive --no-git-tag-version
+      - name: Use Node.js (NPM registry)
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
       - name: Yarn Package Publish
         uses: luvies/action-yarn-publish@v0.1.1
         # with:
