@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 
-const base_exclude = ["yarn.lock", "package.json"];
+const base_exclude = ["yarn.lock", "package.json", ".github"];
 
 const genPath = (base: string, name: string) => path.join(base, name);
 const filter = (files: fs.Dirent[], exclude: string[]) =>
