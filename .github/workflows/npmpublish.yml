@@ -18,16 +18,25 @@ jobs:
           node-version: 12
       - run: yarn
       - run: yarn build
+      - name: Upload template
+        uses: actions/upload-artifact@v1
+        with:
+          name: template
+          path: template/
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js (NPM registry)
-        uses: actions/setup-node@v1
+      - name: Download template
+        uses: actions/download-artifact@v1
         with:
-          node-version: "12.x"
-          registry-url: "https://registry.npmjs.org"
+          name: template
+      # - name: Use Node.js (NPM registry)
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: "12.x"
+      #     registry-url: "https://registry.npmjs.org"
       # - run: yarn publish --not-interactive --no-git-tag-version
       - name: Yarn Package Publish
         uses: luvies/action-yarn-publish@v0.1.1
