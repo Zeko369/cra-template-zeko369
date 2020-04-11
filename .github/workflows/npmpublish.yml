@@ -31,7 +31,7 @@ jobs:
       # - run: yarn publish --not-interactive --no-git-tag-version
       - name: Yarn Package Publish
         uses: luvies/action-yarn-publish@v0.1.1
-        with:
-          git-tag: true
+        # with:
+        #   git-tag: true
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
