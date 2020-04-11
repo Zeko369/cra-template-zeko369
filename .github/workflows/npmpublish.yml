@@ -23,7 +23,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Yarn Package Publish
-        uses: luvies/action-yarn-publish@v0.1.1
+      - name: Use Node.js (NPM registry)
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
+      - run: yarn publish --not-interactive --no-git-tag-version
+        # - name: Yarn Package Publish
+        #   uses: luvies/action-yarn-publish@v0.1.1
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
