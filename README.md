@@ -1,5 +1,15 @@
 # My custom create-react-app template
 
-Libs:
-- Styled-components
-- React router
+### Included libs
+
+- styled-components 💅
+- react-router 🛣️
+
+### Configs
+
+- react fast-refresh 😍⚡️
+
+### Tools / Utils
+
+- prettier
+- eslint
