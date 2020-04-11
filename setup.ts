@@ -30,7 +30,7 @@ const removeComments = (s: string): boolean =>
   !(s.startsWith("#") || s.length === 0 || s.indexOf("/") !== s.lastIndexOf("/"));
 
 const gitignore = async () => {
-  const data = await fs.promises.readFile("./src/.gitignore", "utf-8");
+  const data = await fs.promises.readFile("./app/.gitignore", "utf-8");
   return data
     .split("\n")
     .filter(removeComments)
@@ -46,9 +46,9 @@ const main = async () => {
   await fs.promises.rmdir("./template", { recursive: true });
   await fs.promises.mkdir("template");
 
-  await copy("./src", "./template", exclude);
+  await copy("./app", "./template", exclude);
 
-  const { devDependencies, dependencies, scripts } = require("./src/package.json");
+  const { devDependencies, dependencies, scripts } = require("./app/package.json");
   const data = { package: { dependencies: { ...devDependencies, ...dependencies }, scripts } };
 
   const template = JSON.stringify(data, null, 2);
