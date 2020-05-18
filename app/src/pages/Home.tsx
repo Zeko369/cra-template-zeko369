@@ -9,6 +9,7 @@ const Home: React.FC = () => {
     <div>
       <Link to="/page">Page</Link>
       <br />
+      <i className="material-icons">delete</i>
       <Button onClick={(): void => setCount((v) => v + 1)}>This is a button: {count}</Button>
     </div>
   );
