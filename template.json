@@ -7,7 +7,6 @@
       "@types/react-dom": "^16.9.5",
       "@types/react-router": "^5.1.4",
       "@types/react-router-dom": "^5.1.3",
-      "@types/styled-components": "^5.0.1",
       "@typescript-eslint/eslint-plugin": "^2.25.0",
       "@typescript-eslint/parser": "^2.25.0",
       "customize-cra": "^0.9.1",
@@ -23,12 +22,15 @@
       "prettier": "^2.0.2",
       "react-app-rewired": "^2.1.5",
       "typescript": "^3.7.5",
+      "@chakra-ui/core": "^0.8.0",
+      "@emotion/core": "^10.0.28",
+      "@emotion/styled": "^10.0.27",
+      "emotion-theming": "^10.0.27",
       "react": "^16.12.0",
       "react-dom": "^16.12.0",
       "react-router": "^5.1.2",
       "react-router-dom": "^5.1.2",
-      "react-scripts": "3.4.1",
-      "styled-components": "^5.0.1"
+      "react-scripts": "3.4.1"
     },
     "scripts": {
       "rs:start": "react-scripts start",
