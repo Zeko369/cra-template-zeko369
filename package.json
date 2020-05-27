@@ -6,7 +6,8 @@
   "main": "template.json",
   "scripts": {
     "build": "ts-node setup.ts",
-    "start": "cd src && yarn start"
+    "start": "cd src && yarn start",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "@types/node": "^13.5.3",
